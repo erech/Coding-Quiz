@@ -29,53 +29,53 @@ let scoreBoard = document.querySelector('.scoreCard') ;
 
 let questions = [
     {
-        question : 'Commonly used data types DO Not Include:' ,
+        question : 'What is LIFO?' ,
         answers: [
-            {text: 'strings', correct: false}, 
-            {text: 'bools', correct: false}, 
-            {text: 'alerhtrs', correct: true}, 
-            {text: 'numefds', correct: false}
+            {text: 'Last In First Out', correct: true}, 
+            {text: 'List In First Over', correct: false}, 
+            {text: 'Last Inside Function Over', correct: false}, 
+            {text: 'Linked In Forward Output', correct: false}
         ] 
     },
     {
-        question : 'Cdfsdfwef:' ,
+        question : 'What is Recursion?' ,
         answers: [
-            {text: 'strings', correct: false}, 
-            {text: 'bools', correct: false}, 
-            {text: 'alerhtrs', correct: true}, 
-            {text: 'numefds', correct: false}
+            {text: 'A function that calls itself based on a terminating condition', correct: true}, 
+            {text: 'A type of Object-Oriented Programming', correct: false}, 
+            {text: 'A type of function that does not use LIFO', correct: false}, 
+            {text: 'Refers to wrapping code and data into a single unit', correct: false}
         ] 
     },
     {
-        question : 'sdfsehdthfthtfe:' ,
+        question : 'Which one is a programming language?' ,
         answers: [
-            {text: 'strings', correct: false}, 
-            {text: 'bools', correct: false}, 
-            {text: 'alerhtrs', correct: true}, 
-            {text: 'numefds', correct: false}
+            {text: 'LOLCODE', correct: true}, 
+            {text: 'French', correct: false}, 
+            {text: 'Blender', correct: false}, 
+            {text: 'Pudding', correct: false}
         ] 
     },
     {
-        question : 'CommonlsdfsdffsdfsInclude:' ,
+        question : 'What is a conditional Statement?' ,
         answers: [
-            {text: 'strings', correct: false}, 
-            {text: 'bools', correct: false}, 
-            {text: 'alerhtrs', correct: true}, 
-            {text: 'numefds', correct: false}
+            {text: 'Statements that evaluate to true or false', correct: true}, 
+            {text: 'Used to do something else when condition of statement is not true', correct: false}, 
+            {text: 'Allows user to run a block of code repeatedly', correct: false}, 
+            {text: 'A block of code that can be referenced by name', correct: false}
         ] 
     },
     {
-        question : 'sergsrfdvsere:' ,
+        question : 'What is a text-based interface to send commands to the computer' ,
         answers: [
-            {text: 'strings', correct: false}, 
-            {text: 'bools', correct: false}, 
-            {text: 'alerhtrs', correct: true}, 
-            {text: 'numefds', correct: false}
+            {text: 'terminal', correct: true}, 
+            {text: 'syntax', correct: false}, 
+            {text: 'source code', correct: false}, 
+            {text: 'data', correct: false}
         ] 
     }
 ] ;
 
-//Don't want to show
+//Default display no show
 submit.style.display = 'none' ;
 scoreBoard.style.display = 'none' ;
 quiz.style.display = 'none' ;
@@ -130,7 +130,7 @@ const scorePoints = 100 ;
 const maxQuestions = 5 ;
 
 
-
+//Set Questions
 function setNextQuestion() {
     reset() ;
     showQuestion(shuffledQuestions[currentQuestionIndex]) ;
@@ -151,7 +151,7 @@ function showQuestion (question) {
         options.appendChild(button) ;
     }) ;
 
-    if (questions.length === 0 || question)
+    // if (questions.length === 0 || question)
 };
 
 //resets background to default for each question

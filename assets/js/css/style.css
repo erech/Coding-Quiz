@@ -44,6 +44,11 @@ button:hover {
     margin-right: 30px;
 }
 
+#highScoreBttn {
+    background-color: white;
+    font-family:'Courier New', Courier, monospace ; 
+}
+
 .mainContainer {
     /* background-color: antiquewhite; */
     display: flex;

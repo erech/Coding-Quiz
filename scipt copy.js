@@ -117,6 +117,7 @@ nextBtn.addEventListener('click', ()=> {
     setNextQuestion() ;
 }) ;
 
+//Set Questions
 function setNextQuestion() {
     reset() ;
     showQuestion(shuffledQuestions[currentQuestionIndex]) ;
@@ -138,6 +139,7 @@ function showQuestion (question) {
     }) ;
 };
 
+//resets background to default for each question
 function reset () {
     clearStatusClass(document) ;
     nextBtn.style.display = "none" ;
@@ -182,3 +184,15 @@ function clearStatusClass(element) {
     element.classList.remove('wrong') ;
 }
 
+//Submission form; Retrieve intials and render to score page
+function renderLastRegistered() {
+
+    let userInput = document.querySelector('#userInput') ;
+
+  } ;
+
+submitBtn.addEventListener("click", function() {
+    submit.style.display = "none" ;
+    scoreBoard.style.display = "block" ;
+    renderLastRegistered() ;
+});
