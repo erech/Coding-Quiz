@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="assets\style.css" />
+
+  </head>
+
+  <body>
+
+    <header class="header">
+        <h1 id="highScores" id="scoreTxt"> View high scores</h1>
+        <h2> Time left : <span id="timer"> </span></h2>
+    </header>
+
+    <main class="mainContainer" class="correct" class="wrong">
+
+        <section class="startCard">
+            <h3>Coding Quiz Challenge</h3>
+                <p>Try to answer the following code-related questions within the time limit.
+                    Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+                </p>
+                <button id="startBtn">Start Quiz</button>
+        </section>
+
+        <div class="questionContainer">
+            <h3 id="questionTxt">Question</h3>
+
+            <section class="options">
+                <button id="btn"> Opt 1 </button>
+                <button id="btn"> Opt 2 </button>
+                <button id="btn"> Opt 3 </button>
+                <button id="btn"> Opt 4 </button>
+            </section>
+            <button id="nextBtn"> Next</button>
+            <aside class="resultShow"> </aside>
+        </div>
+    
+        <section class="doneCard">
+            <h3> All Done!</h3>
+            <p>Your final score is <span id="currentScore"></span>.</p>
+            <p>Enter intials: <input id="userInput"></p>
+            <button id="submit"> Submit </button>
+        </section>
+
+        <section class="scoreCard">
+            <h3>High scores</h3>
+            <button id="backBtn"> Go back </button>
+            <button id="clearScoresBtn"> Clear high scores</button>
+        </section>
+
+    </main>
+   <script src="assets\scipt.js"></script>
+  </body>
+</html>
