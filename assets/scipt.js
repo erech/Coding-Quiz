@@ -26,7 +26,7 @@ let submitBtn = document.querySelector('#submit') ;
 let currentScore = document.querySelector('#currentScore') ;
 let scoreBoard = document.querySelector('.scoreCard') ;
 
-
+//Quiz Questions
 let questions = [
     {
         question : 'What is LIFO?' ,
@@ -151,7 +151,6 @@ function showQuestion (question) {
         options.appendChild(button) ;
     }) ;
 
-    // if (questions.length === 0 || question)
 };
 
 //resets background to default for each question
