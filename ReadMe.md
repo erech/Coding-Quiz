@@ -5,6 +5,6 @@ The quiz contains five coding questions.
 The interface responds depending on if the user has clicked on the correct or incorrect answer. 
 
 # Webpage
-![Webpage Screenshot](assets\images\webpagequiz.png)
+![Webpage Screenshot](assets/images/webpagequiz.png)
 
 URL: 
