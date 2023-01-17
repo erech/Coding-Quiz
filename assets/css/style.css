@@ -31,14 +31,12 @@ button:hover {
 }
 
 .header {
-    /* background-color: antiquewhite; */
     display: inline-block ;
     width: 100%;
     font-size: 12px ;
 }
 
 .header h2 {
-    /* background-color: burlywood;  */
     float: right ;
     margin-top : -40px;
     margin-right: 30px;
@@ -50,7 +48,6 @@ button:hover {
 }
 
 .mainContainer {
-    /* background-color: antiquewhite; */
     display: flex;
     align-items: center ;
     justify-content: center;
@@ -62,7 +59,6 @@ button:hover {
 .questionContainer,
 .doneCard,
 .scoreCard {
-    /* background-color: burlywood; */
     width: 750px;
     height: 600px;
     margin-left: 20px;
