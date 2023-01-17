@@ -101,7 +101,8 @@ startBtn.addEventListener('click', function (){
             if (timeLeft > 1) {
                 timerEl.textContent = timeLeft; 
                 timeLeft-- ;
-            } else {
+            } 
+            else {
                 timerEl.textContent = '';
                 clearInterval(timeInterval) ;
                 displayEnd();
@@ -123,12 +124,11 @@ nextBtn.addEventListener('click', ()=> {
 let currentQuestion = {} ;
 let score = 0 ;
 let questionCounter = 0 ; 
-let availableQuestions = {} ;
+let availableQuestions = 5 ;
 
 
 const scorePoints = 100 ;
 const maxQuestions = 5 ;
-
 
 //Set Questions
 function setNextQuestion() {
@@ -193,7 +193,6 @@ function setStatusClass(element, correct) {
 
     } else {
         element.classList.add('wrong') ;
-
     }; 
 };
 
@@ -203,31 +202,35 @@ function clearStatusClass(element) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Submission form; Retrieve intials and render to score page
-function renderLastRegistered() {
+let userInput = document.querySelector('#userInput') ;
 
-    let userInput = document.querySelector('#userInput') ;
+//load existing data if any
+function startQuiz() {
+    scoreBoard = JSON.parse(localStorage.getItem("score"));
+    if (scoreBoard == null) return scoreBoard = {totalClicks : 0};
+    userInput = scoreBoard.userInput;
+    availableQuestions = scoreBoard.availableQuestions;
+    incorrectAns = scoreBoard.incorrectAns;
+    correctAns = scoreBoard.correctAns;
+}
 
-
-
-  } ;
+//save current data
+function saveQuiz() {
+    scoreBoard.availableQuestions = availableQuestions;
+    scoreBoard.incorrectAns = incorrectAns;
+    scoreBoard.correctAns = correctAns;
+    localStorage.setItem("score", JSON.stringify(saveData));
+}
 
 submitBtn.addEventListener("click", function() {
     submit.style.display = "none" ;
     scoreBoard.style.display = "block" ;
-    renderLastRegistered() ;
+    saveQuiz() ;
 });
+
+//clear high scores
+function clearData() {
+    console.log("Clearing all data!");
+    localStorage.clear();
+}
